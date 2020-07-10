@@ -2,6 +2,8 @@ import React from 'react'
 import { RecoilRoot } from 'recoil'
 
 import { Game } from './Game'
+import { Score } from './Score'
+import { Gems } from './Gems'
 import './App.css'
 
 function App() {
@@ -9,7 +11,9 @@ function App() {
     <div className="App">
       <RecoilRoot>
         <h1>Paper Click</h1>
+        <Score />
         <Game />
+        <Gems />
       </RecoilRoot>
     </div>
   );

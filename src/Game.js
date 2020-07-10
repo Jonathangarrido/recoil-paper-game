@@ -13,7 +13,6 @@ export const Game = () => {
 
   return (
     <div>
-      Score: {score}
       <button
         style={{
           background: 'transparent',
@@ -25,7 +24,7 @@ export const Game = () => {
       >
         <span
           role="img"
-          aria-label="donut"
+          aria-label="toiled paper"
           >
           🧻
         </span>
