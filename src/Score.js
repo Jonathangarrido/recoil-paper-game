@@ -1,15 +1,18 @@
 import React from 'react'
 import { useRecoilValue } from 'recoil'
 
-import { gameScore } from './atoms'
+import { gameScore, useResetScore } from './atoms'
 
 export const Score = () => {
 
   const score = useRecoilValue(gameScore)
 
+  const resetScore = useResetScore()
+
   return (
     <div>
       <h3>Score: { score }</h3>
+      <button onClick={resetScore}>Reset</button>
     </div>
   )
 }
