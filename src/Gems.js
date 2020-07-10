@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRecoilValue } from 'recoil'
 
-import { gameScore } from './Atom'
+import { gameScore } from './atoms'
 
 export const Gems = () => {
 

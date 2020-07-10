@@ -1,11 +1,13 @@
 import React from 'react'
-import { useRecoilState } from 'recoil'
+import { useRecoilState, useRecoilValue } from 'recoil'
 
-import { gameScore } from './Atom'
+import { gameScore } from './atoms'
+import { paperSize } from './selector'
 
 export const Game = () => {
 
   const [score, setScore] = useRecoilState(gameScore)
+  const size = useRecoilValue(paperSize)
 
   const paperClick = () => {
     setScore(score+1)
@@ -18,7 +20,7 @@ export const Game = () => {
           background: 'transparent',
           border: 0,
           cursor: 'pointer',
-          fontSize: 100,
+          fontSize: size,
         }}
         onClick={paperClick}
       >
